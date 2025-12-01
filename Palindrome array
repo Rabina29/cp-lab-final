@@ -1,0 +1,39 @@
+2:Given a number 
+N
+N and an array 
+A
+A of 
+N
+N numbers. Determine if it's palindrome or not.
+
+Note:
+
+An array is called palindrome if it reads the same backward and forward, for example, arrays { 1 } and { 1,2,3,2,1 } are palindromes, while arrays { 1,12 } and { 4,7,5,4 } are not.
+
+
+
+
+ANS:
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+
+    int A[N];
+    for (int i = 0; i < N; i++) {
+        cin >> A[i];
+    }
+
+    for (int i = 0; i < N / 2; i++) {
+        if (A[i] != A[N - 1 - i]) {
+            cout << "NO";
+            return 0;
+        }
+    }
+
+    cout << "YES";
+    return 0;
+}
