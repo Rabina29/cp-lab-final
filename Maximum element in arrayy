@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+using namespace std;
+int maxEl(int n, int a[])
+{
+ if(n==1) return a[0];
+ else return max(a[n-1],maxEl(n-1,a));
+}
+int main()
+{
+ int x;
+ cin >> x;
+ int arr[x];
+ for(int i=0;i<x;i++)
+ {
+ cin >> arr[i];
+ }
+ cout << maxEl(x,arr);
+ return 0;
+}
