@@ -1,0 +1,16 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+
+string reverse(string y)
+{
+ if(y.size()==0) return y;
+ else return reverse(y.substr(1))+y[0];
+}
+int main()
+{
+ string p;
+ cin >> p;
+ cout << reverse(p) << endl;
+ return 0;
+}
