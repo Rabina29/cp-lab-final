@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, groups = 1;
+    cin >> n;
+
+    string prev, cur;
+    cin >> prev;
+
+    for(int i = 1; i < n; i++) {
+        cin >> cur;
+        if(cur != prev) groups++;
+        prev = cur;
+    }
+
+    cout << groups;
+}
