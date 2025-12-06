@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+
+    if (T > 30){
+        cout << "YES" << endl;
+    }
+    else
+        cout << "NO" << endl;
+
+    return 0;
+}
+
+
+Chef is feeling the heat this summer and wants to switch on the Air Conditioning all the time, but since he doesn’t want to harm the environment much, he only switches it on when the room temperature is strictly greater than 
+30
+30 degrees celsius.
+
+Given the room temperature, you need to find whether Chef will switch on the air conditioning or not.
