@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A, B;
+    cin >> A >> B;
+    if (B >= A)
+        cout << "Tyro" << endl;
+    else
+        cout << "Dom" << endl;
+    return 0;
+}
+
+
+
+The first and only line of input contains 
+2
+2 integers, 
+A
+A and 
+B
+B - Tyro’s patience level, and the number of times Dom tries to convince Tyro respectively.
