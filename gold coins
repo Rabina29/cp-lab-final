@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int A, B, X, Y;
+    cin >> A >> B >> X >> Y;
+
+    if (X > Y)
+        cout << A << endl;
+    else
+        cout << B << endl;
+
+    return 0;
+}
+
+
+
+Sample 1
+Inputcopy	Outputcopy
+5 2 3 4
+2
+Chef scored 
+3
+3 goals while Chefina scored 
+4
+4 goals. Thus, Chef loses and gets 
+2
+2 coins.
