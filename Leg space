@@ -12,4 +12,19 @@ int main() {
 
     return 0;
 }
-C++
+
+
+
+Input Format
+The only line of input will contain two space-separated integers 
+N
+N and 
+M
+M, denoting the number of students in the school and the number of seats in the school bus respectively.
+
+Chef is happy when the school bus is not full.
+Given 
+N
+N and 
+M
+M, your task is to find out whether Chef will be happy
