@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int x,y;
+    cin>>x>>y;
+    if(2*x<=y){
+    cout<<"YES"<<endl;
+    }
+    else{
+        cout<<"NO"<<endl;
+    }
+    return 0;
+}
+
+
+
+
+Input Format
+The only line of input will contain 
+2
+2 space-separated integers 
+X
+X and 
+Y
+Y, the price of each ice cream and the money Chef has.
