@@ -1,0 +1,14 @@
+#include<bits/stdc++.h>
+using namespace std;
+int sumdigit(int n)
+{
+ if(n>=0&&n<=9) return n;
+ else return (n%10)+sumdigit(n/10);
+}
+int main()
+{
+ int p;
+ cin >> p;
+ cout << sumdigit(p) << endl;
+ return 0;
+}
