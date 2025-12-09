@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<vector<int>> g = {{1,2},{3},{3,4},{5},{5},{}};
+    int s = 0, t = 5;
+
+    vector<int> p(6, -1);
+    queue<int> q;
+    q.push(s); p[s] = s;
+
+    while(!q.empty() && p[t] == -1) {
+        int u = q.front(); q.pop();
+        for(int v : g[u])
+            if(p[v] == -1) p[v] = u, q.push(v);
+    }
+
+    vector<int> path;
+    for(int cur = t; cur != s; cur = p[cur]) path.push_back(cur);
+    path.push_back(s);
+    reverse(path.begin(), path.end());
+
+    for(int x : path) cout << x << " ";
+}
