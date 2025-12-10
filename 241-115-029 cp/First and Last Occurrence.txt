@@ -1,0 +1,55 @@
+#include <iostream>
+#include <vector>
+#include <sstream>
+using namespace std;
+
+
+int lowerBound(const vector<int>& nums, int target) {
+    int left = 0, right = nums.size();
+    while (left < right) {
+        int mid = left + (right - left) / 2;
+        if (nums[mid] < target)
+            left = mid + 1;
+        else
+            right = mid;
+    }
+    return left;
+}
+
+
+vector<int> searchRange(const vector<int>& nums, int target) {
+    int start = lowerBound(nums, target);
+    int end = lowerBound(nums, target + 1) - 1;
+
+    if (start <= end && start < nums.size() && nums[start] == target)
+        return {start, end};
+    return {-1, -1};
+}
+
+int main() {
+    string line;
+    getline(cin, line)
+
+
+    size_t startBracket = line.find('[') + 1;
+    size_t endBracket = line.find(']');
+    string numsStr = line.substr(startBracket, endBracket - startBracket);
+    vector<int> nums;
+    stringstream ss(numsStr);
+    string temp;
+    while (getline(ss, temp, ',')) {
+        nums.push_back(stoi(temp));
+    }
+
+  
+    size_t targetPos = line.find("target =") + 8;
+    int target = stoi(line.substr(targetPos));
+
+    
+    vector<int> result = searchRange(nums, target);
+
+   
+    cout << "[" << result[0] << ", " << result[1] << "]" << endl;
+
+    return 0;
+}
